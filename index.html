@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="libraryHeader">
+        <h1>Your Library</h1>
+    </div>
+    <div id=buttonContainer>
+        <button id="show" onclick="buttonToggle(2)"><b>New Book</b></button>
+        <form id="form" action="" class="formContainer">
+            <h3>Add a Book</h3>
+            <label for="title">Title</label>
+            <input id="title" type="text" placeholder="Enter Book's Title" name="title" required>
+
+            <label for="author">Author</label>
+            <input id="author" type="text" placeholder="Enter Book's Author" name="author" required>
+            <br>
+
+            <label for="pages"># of Pages</label>
+            <input id="pages" type="number" placeholder="Number of Pages" name="pages" required>
+
+
+            <label for="read">Have you read this book?</label>
+            <select id="status" name="readStatus">
+                <option value="Read">Read</option>
+                <option value="Unread">Unread</option>
+            </select>
+            <br>
+
+
+
+            <button id="submit" type="button" value="send"
+                onclick="submitBook(document.getElementById('title').value,document.getElementById('author').value,document.getElementById('pages').value,document.getElementById('status').value)"><b>Submit</b></button>
+        </form>
+        <button id="hide" onclick="buttonToggle(1)"><b>Hide</b></button>
+    </div>
+    <div id="libraryContainer"></div>
+</body>
+<script src="index.js"></script>
+
+</html>
